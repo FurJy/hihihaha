@@ -1,3 +1,6 @@
+nano /etc/systemd/system/ovs-script.service
+
+
 [Unit]
 Description=Description for sample script goes here
 After=network.target
@@ -11,11 +14,14 @@ TimeoutStartSec=0
 WantedBy=default.target
 
 
+nano /opt/script.sh
 
-systemctl daemon-reload
 
-
---------script--------
 #!/bin/bash
 ip addr add _____/_ dev ___
 ip link set ___ up
+
+
+
+chmod +x /opt/script.sh
+systemctl daemon-reload
