@@ -1,0 +1,21 @@
+[Unit]
+Description=Description for sample script goes here
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/script.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
+
+
+
+systemctl daemon-reload
+
+
+--------script--------
+#!/bin/bash
+ip addr add _____/_ dev ___
+ip link set ___ up
