@@ -1,0 +1,8 @@
+docker volume create --driver local --name portainer --opt type=nfs4 --opt device=:/volume1/docker_volumes/portainer --opt o=addr=192.168.10.4,rw,nolock
+
+volumes:
+  nfs:
+    driver_opts:
+      type: nfs
+      o: addr=192.168.200.19,nfsvers=4
+      device: :/volume1/docker_volumes/application
